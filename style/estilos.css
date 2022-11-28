@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/*mobile first 0px-500px*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #e0b0c4;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2{
+    font-size: 3.5em;
+}
+
+a{
+    font-size: 1.5em;
+}
+
+p{
+    font-size: 1.5em;
+}
+
+.box2{
+    align-items: center;
+    width: 150px;
+}
+
+footer{
+    background-color: beige;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-top: 1.5em;
+}
+.main__center{
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(73, 39, 14);
+}
+
+.section__cupcakewar{    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section__cupcakewar1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+.section__centrar{
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.galeria_catalogo_img{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+}
+
+.galeria_tienda_img{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+}
+
+.trans{
+    transition-property: all;
+    transition-duration: 2s;
+}
+
+.box{
+    width: 235px;
+    height: 357px;
+}
+
+.box:hover{
+    transform: scale(1.1) ;
+}
+
+/*declarando grid area */
+
+
+.titulo{
+    grid-area: titulo;
+    margin-bottom: 15px;
+}
+
+.slide{
+    grid-area: slide;   
+}
+
+footer{
+    grid-area: footer;
+}
+
+.galeria_catalogo{
+    grid-area: galeria_catalogo;
+}
+.galeria_tienda{
+    grid-area: galeria_tienda;
+}
+
+/* grilla general */
+
+.home_grid{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-areas:
+    "titulo"
+    "slide"
+    "footer";
+}
+
+.catalogo_grid{
+    display: grid;
+    grid-template-areas:
+    "titulo"
+    "galeria_catalogo"
+    "footer";
+    margin-top: 10px;    
+}
+
+.tienda_grid{
+    display: grid;
+    grid-template-areas:
+    "titulo"
+    "galeria_tienda"
+    "footer";
+    margin-top: 10px;    
+}
+
+
+
+/* Declaracion de MQ*/
+
+@media(min-width:500px) {
+    .catalogo_grid{
+        display: grid;
+        grid-template-areas:
+        "titulo           titulo"
+        "galeria_catalogo galeria_catalogo"
+        "footer           footer";
+        grid-template-columns: 1fr 3fr;
+        margin-top: 10px;
+    }
+
+    .galeria_catalogo_img{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tienda_grid{
+        display: grid;
+        grid-template-areas:
+        "titulo         titulo"
+        "galeria_tienda galeria_tienda"
+        "footer         footer";
+        margin-top: 10px;    
+    }
+
+    .galeria_tienda_img{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+
+@media(min-width:1024px){
+    .catalogo_grid{
+        display: grid;
+        grid-template-areas:
+        "titulo           titulo            titulo"
+        "galeria_catalogo galeria_catalogo galeria_catalogo"
+        "footer           footer           footer";
+        margin-top: 10px;
+    }
+
+    .galeria_catalogo_img{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
