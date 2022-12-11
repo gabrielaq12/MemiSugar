@@ -1,0 +1,17 @@
+.trans {
+    transition-property: all;
+    transition-duration: 2s;
+}
+
+.box {
+    width: 235px;
+    height: 357px;
+}
+
+.box:hover {
+    transform: scale(1.1);
+}
+
+.card{
+    margin-top: 10px;
+}

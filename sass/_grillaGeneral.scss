@@ -1,0 +1,19 @@
+/* grilla general */
+.home_grid {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-areas: "titulo" "slide" "footer";
+}
+
+.catalogo_grid {
+    display: grid;
+    grid-template-areas: "titulo" "galeria_catalogo" "footer";
+    margin-top: 10px;
+    }
+
+.tienda_grid {
+    display: grid;
+    grid-template-areas: "titulo" "galeria_tienda" "footer";
+    margin-top: 10px;
+}

@@ -1,0 +1,21 @@
+/*declarando grid area */
+.titulo {
+    grid-area: titulo;
+    margin-bottom: 15px;
+}
+
+.slide {
+    grid-area: slide;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.galeria_catalogo {
+    grid-area: galeria_catalogo;
+}
+
+.galeria_tienda {
+    grid-area: galeria_tienda;
+}

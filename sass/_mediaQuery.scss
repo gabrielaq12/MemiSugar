@@ -1,0 +1,33 @@
+/* Declaracion de MQ*/
+@media (min-width: 500px) {
+    .catalogo_grid {
+        display: grid;
+        grid-template-areas: "titulo           titulo" "galeria_catalogo galeria_catalogo" "footer           footer";
+        grid-template-columns: 1fr 3fr;
+        margin-top: 10px;
+    }
+    .galeria_catalogo_img {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .tienda_grid {
+        display: grid;
+        grid-template-areas: "titulo         titulo" "galeria_tienda galeria_tienda" "footer         footer";
+        margin-top: 10px;
+    }
+    .galeria_tienda_img {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    }
+    @media (min-width: 1024px) {
+    .catalogo_grid {
+        display: grid;
+        grid-template-areas: "titulo  titulo            titulo" "galeria_catalogo galeria_catalogo galeria_catalogo" "footer           footer           footer";
+        margin-top: 10px;
+    }
+    .galeria_catalogo_img {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    }

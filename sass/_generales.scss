@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: $size;
+}
+
+body {
+    background: $colorFondo;
+    background: $colorFondo2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    h1, h2 {
+        font-size: 3.5em;
+    }
+    a {
+        font-size: 1.5em;
+    }
+    
+    p {
+        font-size: 1.5em;
+    }
+}
+
+.main__center {
+    font-family: $letras;
+    color: $colorTitulo;
+}
