@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -9,12 +10,13 @@ html {
 }
 
 body {
-  background: rgb(252, 250, 252);
+  background: rgb(92, 55, 38);
   background: linear-gradient(180deg, hwb(0 100% 0%) 0%, rgb(241, 189, 226) 100%);
   text-align: center;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: relative;
 }
 body h1, body h2 {
   font-size: 3.5em;
@@ -27,19 +29,22 @@ body p {
 }
 
 .main__center {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Dancing Script", cursive;
   color: black;
 }
-
-.box2 {
-  align-items: center;
-  width: 150px;
+.main__center p {
+  font-size: 3em;
+}
+.main__center h1 {
+  font-size: 4.5em;
 }
 
-footer {
-  justify-content: center;
-  margin-bottom: 0;
-  margin-top: 1.5em;
+.cirulo {
+  width: 250px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
 }
 
 .section__cupcakewar {
@@ -52,13 +57,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 70px;
-}
-
-.section__centrar {
-  margin-top: 10px;
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
 }
 
 .galeria_catalogo_img {
@@ -75,22 +73,75 @@ footer {
   justify-items: center;
 }
 
+.slide_img {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+}
+
+.section__centrar {
+  margin-top: 10px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.box2 {
+  align-items: center;
+  width: 150px;
+}
+
+footer {
+  justify-content: center;
+  margin-bottom: 0;
+  margin-top: 1.5em;
+}
+
+.box {
+  width: 233px;
+  height: 357px;
+}
+
 .trans {
   transition-property: all;
   transition-duration: 2s;
 }
 
-.box {
-  width: 235px;
-  height: 357px;
+.card:hover {
+  transform: scale(1.05);
 }
 
 .box:hover {
   transform: scale(1.1);
 }
 
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .card {
-  margin-top: 10px;
+  margin: 0 0.5em;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+  border-radius: 0;
+  margin-top: 15px;
+}
+.card h5 {
+  color: black;
+  font-size: 2em;
+}
+.card p {
+  color: black;
+}
+
+.slide {
+  background-color: white;
+  color: white;
+}
+.slide h1 {
+  color: black;
+  font-family: "Dancing Script", cursive;
 }
 
 /*declarando grid area */
@@ -118,8 +169,7 @@ footer {
 /* grilla general */
 .home_grid {
   display: grid;
-  width: 100%;
-  height: 100vh;
+  margin-top: 10px;
   grid-template-areas: "titulo" "slide" "footer";
 }
 
@@ -160,16 +210,20 @@ footer {
 @media (min-width: 1024px) {
   .catalogo_grid {
     display: grid;
-    grid-template-areas: "titulo  titulo            titulo" "galeria_catalogo galeria_catalogo galeria_catalogo" "footer           footer           footer";
+    grid-template-areas: "titulo           titulo           titulo" "galeria_catalogo galeria_catalogo galeria_catalogo" "footer           footer           footer";
     margin-top: 10px;
   }
   .galeria_catalogo_img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .slide_img {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 .navbar.navbar-light.navbar-expand-md.bg-faded.justify-content-center li a {
-  color: black;
+  color: rgb(10, 5, 2);
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
   margin-right: 20px;
@@ -192,11 +246,16 @@ label {
   margin-top: 5px;
 }
 
-.card {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
 .col-md-12 {
   margin-top: 10px;
+}
+
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 105%;
+  min-height: 100%;
+  transform: translateX(calc((100% - 100vw) / 2));
+  z-index: -2;
 }/*# sourceMappingURL=estilos.css.map */

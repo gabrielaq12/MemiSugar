@@ -1,3 +1,44 @@
+@mixin center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin grid{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+
+}
+
+.section__cupcakewar {
+    @include center;
+}
+
+.section__cupcakewar1 {
+    @include center;
+}
+
+.galeria_catalogo_img {
+    @include grid;
+}
+
+.galeria_tienda_img {
+    @include grid;
+}
+
+.slide_img{
+    @include grid;
+}
+
+.section__centrar {
+    margin-top: 10px;
+    text-align: center;
+    font-family: $letras;
+}
+
 .box2 {
     align-items: center;
     width: 150px;
@@ -7,37 +48,4 @@ footer {
     justify-content: center;
     margin-bottom: 0;
     margin-top: 1.5em;
-}
-
-.section__cupcakewar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.section__cupcakewar1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 70px;
-}
-
-.section__centrar {
-    margin-top: 10px;
-    text-align: center;
-    font-family: $letras;
-}
-
-.galeria_catalogo_img {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    justify-items: center;
-}
-
-.galeria_tienda_img {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    justify-items: center;
 }
