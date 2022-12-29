@@ -4,3 +4,10 @@
     font-size: 20px;
     margin-right: 20px;
 }
+
+nav.custom { 
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    z-index: 5; /* Make sure the image is behind the navbar, to show the effect */
+    margin-bottom: 10px;
+}

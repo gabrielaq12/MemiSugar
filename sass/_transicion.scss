@@ -44,10 +44,11 @@
 }
 
 .slide{
-    background-color: white;
     color: white;
+    background-image: url();
     h1{
-        color: $colorTitulo;
+        color: white;
         font-family: $letras_titulos;
     }
+    background: url(../images/banner2.jpg);
 }

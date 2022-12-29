@@ -10,8 +10,7 @@ html {
 }
 
 body {
-  background: rgb(92, 55, 38);
-  background: linear-gradient(180deg, hwb(0 100% 0%) 0%, rgb(241, 189, 226) 100%);
+  background: url(../images//background4.jpg);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -136,11 +135,12 @@ footer {
 }
 
 .slide {
-  background-color: white;
   color: white;
+  background-image: url();
+  background: url(../images/banner2.jpg);
 }
 .slide h1 {
-  color: black;
+  color: white;
   font-family: "Dancing Script", cursive;
 }
 
@@ -227,6 +227,14 @@ footer {
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
   margin-right: 20px;
+}
+
+nav.custom {
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: 5; /* Make sure the image is behind the navbar, to show the effect */
+  margin-bottom: 10px;
 }
 
 label {
