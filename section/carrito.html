@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Tiendita, donde encontraras los mejores detalles para personalizar tu celebracion desde el mas pequeño de la casa al mas grande">
-    <meta name="keywords" content="piñatas, bolsas de regalo, cajas, tarjetas de invitacion lazos">
+    <meta name="description" content="Realizamos detalles y repostería personalizada para tu celebración especial, con la temática que mas te guste.">
+    <meta name="keywords" content="cupcake, quesillo, cakepops, trufas, shots, pie ">
     <link rel="apple-touch-icon" sizes="57x57" href="../images/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="../images/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="..images/favicon/apple-icon-72x72.png">
@@ -25,10 +25,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/estilos.css">
-    <title>section__tiendita</title>
+    <title>Catalogo</title>
 </head>
 <body>
-    <header>
+    <header>       
         <nav class= "navbar navbar-light navbar-expand-md bg-faded justify-content-center custom"  >
             <div class="container">
                 <a class="navbar-brand d-flex w-50 me-auto"  href="./index.html">
@@ -65,75 +65,54 @@
         </nav>
     </header>
 
-    <main class="tienda_grid">
+    <main class="carrito_grid">
         <section class="titulo">
             <div class="main__center">
-                <h1>Tiendita</h1>        
-            </div> 
+                <h1>Carrito</h1>            
+            </div>
         </section>
-        <section class="galeria_tienda">
-            <section class="galeria_tienda_img">
+        <section class="grid_productos">
+            <section class="slide_img">
+                <div class="card" style="width: 23.3rem;">
+                    <img class="box trans"img src="../images/piedelemon.png" class="card-img-top" alt="lemon pie">
+                    <div class="card-body">
+                    <h5 class="card-title">Lemon Pie</h5>
+                    <p class="card-text"> Delicioso Pie elaborado con base de galleta, Crema de limón y Merengue Italiano</p>    
+                    <a href="" class="btn btn-primary" style="font-size: 1.4rem" id="btnClickServicioPie">Agregar a carrito</a>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 23.3rem;">
+                    <img class="box trans"img src="../images/quesillo1.png" class="card-img-top" alt="imagen quesillo">
+                    <div class="card-body">
+                    <h5 class="card-title">Quesillo</h5>
+                    <p class="card-text">Delicioso postre, hecho a base de huevos, leche completa, leche condensada y ron.</p>
+                    <a href="" class="btn btn-primary" style="font-size: 1.4rem" id="btnClickServicioQuesillo">Agregar a carrito</a>
+                    </div>
+                </div>
 
                 <div class="card" style="width: 23.3rem;">
                     <img class="box trans"img src="../images/pinata.png" class="card-img-top" alt="imagen pinata">
                     <div class="card-body">
                     <h5 class="card-title">Piñata</h5>
-                    <p class="card-text"> ¡Una propuesta, divertida y mágica! ¡Ediciones únicas, y personalizadas! Nuestra Piñata incluye: Snacks dulces, salados, chocolates, golosinas, juguetes & Más</p>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item" style="font-size: 1.4rem;">Pequeña</li>
-                        <li class="list-group-item" style="font-size: 1.4rem;">Mediana </li>
-                        <li class="list-group-item" style="font-size: 1.4rem;">Grande</li>
-                        </ul>    
-                    <a href="" class="btn btn-primary" style="font-size: 1.4rem;">Agregar a carrito</a>
+                    <p class="card-text"> Nuestra Piñata incluye: Snacks dulces, salados, chocolates, golosinas, juguetes & Más</p>
+                    <a href="javascript:void(0);" class="btn btn-primary" style="font-size: 1.4rem" id="btnClickServicioPinata">Agregar a carrito</a>
                     </div>
                 </div>
+                <div style="margin-top: 25px;"></div>
+            </div>
+        </section>
+        <section class="comprabox" id="boxCarrito">
 
-                <div class="card" style="width: 23.3rem;">
-                    <img class="box trans"img src="../images/bolsas.png" class="card-img-top" alt="imagen bolsas">
-                        <div class="card-body">
-                        <h5 class="card-title">Bolsas</h5>
-                        <p class="card-text"> Bolsas personalizadas para cualquier evento ¡Elegí el diseño que más te guste!</p>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item" style="font-size: 1.4rem;">Cantidad 50 ud</li>
-                            <li class="list-group-item" style="font-size: 1.4rem;">Cantidad 100 ud</li>
-                            <li class="list-group-item" style="font-size: 1.4rem;">Cantidad 200 ud</li>
-                            </ul>    
-                        <a href="" class="btn btn-primary" style="font-size: 1.4rem;">Agregar a carrito</a>
-                        </div>
-                </div>
-
-                <div class="card" style="width: 23.3rem;">
-                    <img class="box trans"img src="../images/detalles.png" class="card-img-top" alt="imagen detalles">
-                    <div class="card-body">
-                    <h5 class="card-title">Detalles</h5>
-                    <p class="card-text"> Cajas personalizadas de regalo para darle un detalle a tus invitados.¡Elegí el diseño que más te guste! ♥️</p>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item" style="font-size: 1.4rem;"> Cantidad 50 ud</li>
-                        <li class="list-group-item" style="font-size: 1.4rem;"> Cantidad 100 ud </li>
-                        <li class="list-group-item" style="font-size: 1.4rem;">Cantidad 200 ud</li>
-                        </ul>    
-                    <a href="" class="btn btn-primary" style="font-size: 1.4rem;">Agregar a carrito</a>
-                    </div>
-                </div>
-
-                <div class="card" style="width: 23.3rem;">
-                    <img class="box trans"img src="../images/tarjeta (1).png" class="card-img-top" alt="imagen tarjetas">
-                    <div class="card-body">
-                    <h5 class="card-title">Tarjetas</h5>
-                    <p class="card-text"> Tarjetas personalizadas de invitación o recuerdo.¡Elegí el diseño que más te guste! ♥️</p>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item" style="font-size: 1.4rem;"> Cantidad 50 ud</li>
-                        <li class="list-group-item" style="font-size: 1.4rem;"> Cantidad 100 ud </li>
-                        <li class="list-group-item" style="font-size: 1.4rem;">Cantidad 200 ud</li>
-                        </ul>    
-                    <a href="" class="btn btn-primary" style="font-size: 1.4rem;">Agregar a carrito</a>
-                </div>
-            </section>    
+        </section>
+        <section class="carrito">
+            <a href="" class="btn btn-primary" style="font-size: 1.4rem" id="btnVaciarCarrito">vaciar carrito</a>
+            <a href="" class="btn btn-primary" style="font-size: 1.4rem" id="btnFinalizarCompra">finalizar compra</a>
         </section>
     </main>
 
     <footer>
-        <div>
+        <div>            
             <a href="https://www.facebook.com/" target="_blank"><img src="../images/icons8-facebook-nuevo.svg" alt="logo facebook negro"></a>
             <a href="https://www.instagram.com/memi_sugar/" target="_blank"><img src="../images/icons8-instagram.svg" alt="logo instagram negro"></a>
             <a href="https://ar.pinterest.com/" target="_blank"><img src="../images/icons8-pinterest.svg" alt="logo pnterest negro"></a>
@@ -141,6 +120,25 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
+    <script>
+        class Producto {
+        constructor (sabor, precio){
+        this.sabor = sabor;
+        this.precio = precio;
+        }
+        }
+        if (localStorage.getItem("carrito") == null){
+            localStorage.setItem("carrito", JSON.stringify([]));
+        }
+        
+        const quesillo = new Producto ("quesillo", 500);
+        const pie = new Producto ("pie", 550);
+        const pinata = new Producto ("pinata", 480 );
+        console.log("setUp listo");
+        console.log(quesillo);
+
+        
+    </script>
+    <script src="./script.js"></script>
 </body>
 </html>

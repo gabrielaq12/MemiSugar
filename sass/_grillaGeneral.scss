@@ -17,3 +17,8 @@
     grid-template-areas: "titulo" "galeria_tienda" "footer";
     margin-top: 10px;
 }
+
+.carrito.grid{
+    display: grid;
+    grid-template-areas: "titulo" "grid_productos" "comprabox" "carrito" "footer";
+}

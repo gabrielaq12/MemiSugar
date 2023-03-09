@@ -185,6 +185,11 @@ footer {
   margin-top: 10px;
 }
 
+.carrito.grid {
+  display: grid;
+  grid-template-areas: "titulo" "grid_productos" "carrito" "footer";
+}
+
 /* Declaracion de MQ*/
 @media (min-width: 500px) {
   .catalogo_grid {
