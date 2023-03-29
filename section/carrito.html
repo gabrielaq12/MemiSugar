@@ -78,7 +78,7 @@
                     <div class="card-body">
                     <h5 class="card-title">Lemon Pie</h5>
                     <p class="card-text"> Delicioso Pie elaborado con base de galleta, Crema de limón y Merengue Italiano</p>    
-                    <a href="" class="btn btn-primary" style="font-size: 1.4rem" id="btnClickServicioPie">Agregar a carrito</a>
+                    <a href="#" class="btn btn-primary" style="font-size: 1.4rem" id="btnClickServicioPie">Agregar a carrito</a>
                     </div>
                 </div>
 
@@ -87,7 +87,7 @@
                     <div class="card-body">
                     <h5 class="card-title">Quesillo</h5>
                     <p class="card-text">Delicioso postre, hecho a base de huevos, leche completa, leche condensada y ron.</p>
-                    <a href="" class="btn btn-primary" style="font-size: 1.4rem" id="btnClickServicioQuesillo">Agregar a carrito</a>
+                    <a href="#" class="btn btn-primary" style="font-size: 1.4rem" id="btnClickServicioQuesillo">Agregar a carrito</a>
                     </div>
                 </div>
 
@@ -96,7 +96,7 @@
                     <div class="card-body">
                     <h5 class="card-title">Piñata</h5>
                     <p class="card-text"> Nuestra Piñata incluye: Snacks dulces, salados, chocolates, golosinas, juguetes & Más</p>
-                    <a href="javascript:void(0);" class="btn btn-primary" style="font-size: 1.4rem" id="btnClickServicioPinata">Agregar a carrito</a>
+                    <a href="#" class="btn btn-primary" style="font-size: 1.4rem" id="btnClickServicioPinata">Agregar a carrito</a>
                     </div>
                 </div>
                 <div style="margin-top: 25px;"></div>
@@ -105,12 +105,21 @@
         <section class="comprabox" id="boxCarrito">
 
         </section>
-        <section class="carrito">
-            <a href="" class="btn btn-primary" style="font-size: 1.4rem" id="btnVaciarCarrito">vaciar carrito</a>
-            <a href="" class="btn btn-primary" style="font-size: 1.4rem" id="btnFinalizarCompra">finalizar compra</a>
-        </section>
     </main>
-
+    <section class="titulo" id="cart" style="display: none; background-color: rgba(255, 255, 255, 0.5) ">
+        <h2>Productos: </h2>
+        <div id="products" style="font-size: medium;">
+            
+        </div>
+        <h2>Total: </h2>
+        <div id="total">
+            
+        </div>
+    </section>
+    <section class="carrito">
+        <a href="" class="btn btn-primary" style="font-size: 1.4rem" id="btnVaciarCarrito">vaciar carrito</a>
+        <a href="https://buy.stripe.com/test_dR628MdwA2hNbhC000" class="btn btn-primary" style="font-size: 1.4rem" id="btnFinalizarCompra">finalizar compra</a>
+    </section>
     <footer>
         <div>            
             <a href="https://www.facebook.com/" target="_blank"><img src="../images/icons8-facebook-nuevo.svg" alt="logo facebook negro"></a>
@@ -123,21 +132,45 @@
     <script>
         class Producto {
         constructor (sabor, precio){
-        this.sabor = sabor;
-        this.precio = precio;
+            this.sabor = sabor;
+            this.precio = precio;
         }
         }
         if (localStorage.getItem("carrito") == null){
             localStorage.setItem("carrito", JSON.stringify([]));
+        } else {
+            let cart = document.getElementById("cart");
+            cart.style.display = "block";
+            refrescarCarrito();
         }
-        
         const quesillo = new Producto ("quesillo", 500);
         const pie = new Producto ("pie", 550);
         const pinata = new Producto ("pinata", 480 );
-        console.log("setUp listo");
-        console.log(quesillo);
-
-        
+        function refrescarCarrito(){
+            let cart = document.getElementById("cart");
+            cart.style.display = "block";
+            var itemsContainer = document.getElementById("products");
+            itemsContainer.innerHTML = "";
+            let totalContainer = document.getElementById("total");
+            totalContainer.innerHTML = "";
+            let carrito = JSON.parse(localStorage.getItem("carrito"));
+            carrito.forEach(function(element){
+                let elementDiv = document.createElement("div");
+                elementDiv.innerHTML = element.producto.sabor + " x " + element.cantidad + " = " + element.total;
+                itemsContainer.appendChild(elementDiv);
+            });
+            let elementDiv = document.createElement("div");
+            elementDiv.innerHTML = "$"+calcularTotalCarrito();
+            totalContainer.appendChild(elementDiv);
+        }
+        function calcularTotalCarrito(){
+            let total = 0;
+            let carrito = JSON.parse(localStorage.getItem("carrito"));
+            carrito.forEach(function(element){
+                total += element.total; 
+            });
+            return total;
+        }
     </script>
     <script src="./script.js"></script>
 </body>
